@@ -1,10 +1,10 @@
 {
-	"name": "Tower",
+	"name": "WKCrasher",
 	"version": "0.1.0",
 	"authors": [
 		"Chris Moyer <cmoyer@newstex.com>"
 	],
-	"description": "Tower Central command for Newstex, LLC",
+	"description": "Webkit Inspection Crasher",
 	"main": "index.html",
 	"license": "NONE",
 	"private": true,
