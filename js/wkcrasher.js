@@ -4,7 +4,7 @@
  * @author: Chris Moyer <cmoyer@newstex.com>
  */
 /* global angular, $, io */
-var wkcrasher = angular.module('wkcrasher',['angularMoment', 'ngSanitize', 'highCharts', 'ui.date'],function($routeProvider) {
+var wkcrasher = angular.module('wkcrasher',function($routeProvider) {
 	$routeProvider
 	.when('/home',{
 		templateUrl:'views/home.tmpl',
