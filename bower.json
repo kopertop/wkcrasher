@@ -1,0 +1,22 @@
+{
+	"name": "Tower",
+	"version": "0.1.0",
+	"authors": [
+		"Chris Moyer <cmoyer@newstex.com>"
+	],
+	"description": "Tower Central command for Newstex, LLC",
+	"main": "index.html",
+	"license": "NONE",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular-ui-date": "latest",
+		"angular-moment": "latest"
+	}
+}

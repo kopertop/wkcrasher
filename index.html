@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Webkit Crasher</title>
+
+		<script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/jquery-1.9.1.min.js"></script>
+		<script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/jquery.cookie.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+
+		<!-- Bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		<link href="bootstrap/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+
+		<!-- Boostrap Style overrides -->
+		<link href="style/main.css" rel="stylesheet" media="screen">
+
+		<!-- Angular -->
+		<script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/angular/angular.min.js"></script>
+		<script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/angular/angular-sanitize.min.js"></script>
+
+
+		<!-- Datepicker -->
+		<script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+		<link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css"/>
+		<script type="text/javascript" src="bower_components/angular-ui-date/src/date.js"></script>
+		<!-- <script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/angular/angular-datepicker.js"></script> -->
+
+		<!-- Moment.js -->
+		<script type="text/javascript" src="bower_components/moment/moment.js"></script>
+		<script type="text/javascript" src="bower_components/angular-moment/angular-moment.js"></script>
+
+		<!-- Highcharts -->
+		<script type="text/javascript" src="//code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="//code.highcharts.com/highcharts-more.js"></script>
+
+		<script type="text/javascript" src="js/angular-highcharts.js"></script>
+		<!-- <script src="//d3ffdcx4kdktsi.cloudfront.net/javascript/angular/angular-highcharts.js"></script>-->
+
+		<!-- Date Formatting help -->
+		<script type="text/javascript" src="js/strftime.min.js"></script>
+
+		<!-- Bootstrap Sortable -->
+		<link href="style/bootstrap-sortable.css" rel="stylesheet" media="screen">
+		<script type="text/javascript" src="js/bootstrap-sortable.min.js"></script>
+
+		<!-- Our Apps -->
+		<script type="text/javascript" src="js/wkcrasher.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		
+	</head>
+	<body ng-app="wkcrasher">
+		<!-- Header Nav -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<a href="#/home" class="navbar-brand">WK Crasher</a>
+				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="nav-collapse bs-navbar-collapse collapse" style="height: 0px; ">
+					<ul class="nav navbar-nav" ng-controller="LinkCntrl">
+						<li ng-repeat="link in links" ng-class="(location.path().indexOf(link.url) == 0 && 'active')">
+							<a href="#{{link.url}}">{{link.name}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- END Header Nav -->
+
+		<div class="container" ng-view></div>
+
+
+		<hr>
+		<footer>
+			<center>© Newstex 2013</center>
+		</footer>
+
+	</body>
+</html>
